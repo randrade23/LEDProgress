@@ -21,11 +21,13 @@ LEDProgress::LEDProgress(int leds[], int nleds, int maxprog) {
 
 	// Create buckets to store progress (fade value)
 	_buckets = (int*) malloc(_nleds * sizeof(int));
-	for (int i = 0; i  < _nleds; i++) _buckets[i] = 0;
+	_cleanBuckets();
 	_ledprog = _maxprog / _nleds;
 }
 
 void LEDProgress::setProgress(int prog) {
+	_cleanBuckets();
+
 	// Store progress
 	_prog = prog;
 
@@ -46,4 +48,8 @@ void LEDProgress::setProgress(int prog) {
 
 int LEDProgress::getProgress() {
 	return _prog;
+}
+
+void LEDProgress::_cleanBuckets() {
+	for (int i = 0; i  < _nleds; i++) _buckets[i] = 0;
 }
