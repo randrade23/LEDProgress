@@ -9,13 +9,10 @@
 #include "LEDProgress.h"
 
 LEDProgress::LEDProgress(int leds[], int nleds, int maxprog) {
-	// Copy data into the class
+	// Copy data into the class (leds array will only point to argument, not copied)
 	_nleds = nleds;
 	_maxprog = maxprog;
-	_leds = (int*) malloc(_nleds * sizeof(int));
-	for (int i = 0; i < _nleds; i++) {
-		_leds[i] = leds[i];
-	}
+	_leds = leds;
 
 	// Set LEDs up as PWM to allow partial lighting
 	for (int i = 0; i < _nleds; i++) {
