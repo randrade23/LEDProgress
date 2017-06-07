@@ -16,3 +16,4 @@ LEDProgress ledprogress(leds, nleds, 100);
 ledprogress.setProgress(60);
 ```
 
+A working example can be found [here](https://github.com/randrade23/HumidityLevel).
