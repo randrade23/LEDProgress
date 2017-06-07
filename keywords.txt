@@ -1,0 +1,3 @@
+LEDProgress	KEYWORD1
+getProgress	KEYWORD2
+setProgress	KEYWORD2
