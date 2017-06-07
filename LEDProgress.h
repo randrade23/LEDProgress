@@ -17,7 +17,7 @@ class LEDProgress
     int getProgress();
 
   private:
-    int* _leds; // led pins
+    int* _leds; // led pins - will point to the array passed in the constructor
     int _nleds; // number of leds
     int _maxprog; // maximum progress in total
     int _prog; // current progress
