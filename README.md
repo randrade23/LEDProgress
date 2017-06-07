@@ -1,6 +1,6 @@
 # LEDProgress
 
-Simulate a progress bar using several LEDs.
+Library to simulate a progress bar using several LEDs.
 
 Create an instance of the class using the *LEDProgress* constructor, telling how many LEDs you have, their pins and maximum progress. Progress can then be changed using the *setProgress()* function, and checked with the *getProgress()* function.
 
