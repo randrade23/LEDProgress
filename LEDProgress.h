@@ -23,6 +23,7 @@ class LEDProgress
     int _prog; // current progress
     int* _buckets; // fade values for each led
     int _ledprog; // how much progress each led represents
+    void _cleanBuckets(); // clean out the fade values
 };
 
 #endif
